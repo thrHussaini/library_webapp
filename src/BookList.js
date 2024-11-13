@@ -10,7 +10,7 @@ const BookList = () => {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    // Fetch books on component mount
+    // Fetch books on component
     axios.get('http://localhost:8085/api/v1/book')
       .then(response => setBooks(response.data))
       .catch(error => console.error('Error fetching books:', error));
